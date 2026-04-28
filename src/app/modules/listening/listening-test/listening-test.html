@@ -1,0 +1,15 @@
+<div *ngIf="data">
+    <h2>{{ data.title }}</h2>
+
+    <audio controls>
+        <source [src]="data.audio" type="audio/mpeg">
+    </audio>
+
+    <div *ngFor="let q of data.questions">
+        <p>{{ q.question }}</p>
+
+        <div *ngFor="let opt of q.options">
+            <input type="radio"> {{ opt }}
+        </div>
+    </div>
+</div>

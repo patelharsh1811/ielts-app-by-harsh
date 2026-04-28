@@ -1,0 +1,17 @@
+<div *ngIf="data">
+    <h2>{{ data.title }}</h2>
+
+    <p>{{ data.passage }}</p>
+
+    <div *ngFor="let q of data.questions">
+        <p><b>{{ q.id }}. {{ q.question }}</b></p>
+
+        <div *ngFor="let opt of q.options">
+            <label>
+                <input type="radio" [name]="'q' + q.id" /> {{ opt }}
+            </label>
+        </div>
+
+        <hr />
+    </div>
+</div>

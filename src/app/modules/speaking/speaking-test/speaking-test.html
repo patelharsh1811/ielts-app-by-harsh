@@ -1,0 +1,7 @@
+<div *ngIf="data">
+    <h2>{{ data.title }}</h2>
+
+    <ul>
+        <li *ngFor="let q of data.questions">{{ q }}</li>
+    </ul>
+</div>
